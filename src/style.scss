@@ -1,3 +1,87 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: red;
+  background-color: black;
+  #content_Home {
+    .header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 150px;
+      background-color: black;
+      color: white;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      .nav {
+        text-decoration: none;
+        display: flex;
+        list-style-type: none;
+        font-size: 1.5em;
+        li {
+          margin-right: 100px;
+        }
+      }
+    }
+    #main {
+      #cover {
+        h1 {
+          text-align: center;
+        }
+        height: 600px;
+        padding-top: 100px;
+        color: white;
+        font-size: 3em;
+        background: url(../src/img/sora-sagano-8sOZJ8JF0S8-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+    #food_examples {
+      color: white;
+      text-align: center;
+      h2 {
+        margin: 30px 0;
+      }
+      #food_pictures {
+        display: flex;
+        justify-content: space-evenly;
+        img {
+          width: 200px;
+          height: 150px;
+        }
+      }
+    }
+    .footer {
+      color: white;
+      padding-top: 75px;
+      height: 150px;
+      display: flex;
+      justify-content: space-between;
+      .terms {
+        margin-left: 150px;
+        a {
+          text-decoration: none;
+          color: white;
+          margin-right: 30px;
+        }
+      }
+      .socialmedia {
+        margin-right: 150px;
+        a {
+          color: white;
+          text-decoration: none;
+          margin-left: 30px;
+          scale: 150px;
+        }
+        i {
+          scale: 150%;
+        }
+      }
+    }
+  }
 }
