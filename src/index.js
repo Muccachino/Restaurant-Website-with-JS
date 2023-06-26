@@ -1,7 +1,10 @@
 import "./style.scss";
 import logo from "./img/new_cherry_blossom_logo3.jpg";
+import noodle1 from "./img/noodle1.jpg";
 import bowl1 from "./img/bowl1.jpg";
 import ramen1 from "./img/ramen1.jpg";
+import sushi1 from "./img/sushi1.jpg";
+import sushi2 from "./img/sushi2.jpg";
 import sushi3 from "./img/sushi3.jpg";
 
 import {
@@ -11,10 +14,13 @@ import {
   createMultipleTags,
 } from "./modules/functions";
 
+const allFoodPictures = [noodle1, bowl1, ramen1, sushi1, sushi2, sushi3];
+console.log(allFoodPictures[1]);
+
 /* Header - Start */
 
 const header = createTags("header", "header");
-expandHtml(document.body.firstElementChild, header);
+expandHtml(document.body, header);
 
 const headerLogo = addPicture(logo, header);
 
@@ -29,18 +35,18 @@ createMultipleTags("li", 3, headerNavi, [
 
 /* Header - End */
 
-/* Mainsection - Start */
+/* Home section - Start */
 
-const main = createTags("section", null, "main");
-expandHtml(document.body.firstElementChild, main);
+const home = createTags("section", "hide", "home");
+expandHtml(document.body, home);
 
 const cover = createTags("div", null, "cover");
-expandHtml(main, cover);
+expandHtml(home, cover);
 const coverHeadline = createTags("h1", null, null, "Welcome to Sakura");
 expandHtml(cover, coverHeadline);
 
 const foodExamples = createTags("div", null, "food_examples");
-expandHtml(main, foodExamples);
+expandHtml(home, foodExamples);
 const foodExamplesHeadline = createTags(
   "h2",
   null,
@@ -56,12 +62,45 @@ const foodImg1 = addPicture(bowl1, foodPictures);
 const foodImg2 = addPicture(ramen1, foodPictures);
 const foodImg3 = addPicture(sushi3, foodPictures);
 
-/* Mainsection - Ende */
+/* Home section - End */
+
+/* Menu section - Star */
+
+const menu = createTags("section", null, "menu");
+expandHtml(document.body, menu);
+
+const menuHeadline = createTags(
+  "h1",
+  null,
+  "menu_Headline",
+  "Best japanese cuisine for the best price!"
+);
+expandHtml(menu, menuHeadline);
+
+const menuContainer = createTags("div", null, "menu_Container");
+expandHtml(menu, menuContainer);
+
+const menuPictures = createMultipleTags(
+  "div",
+  5,
+  menuContainer,
+  [
+    "Ramen - $12.90",
+    "Bowl - $9.90",
+    "Noodle Dishes - from $8.90",
+    "Sushi Mix - $15.90",
+    "California Rolls - $10.90",
+    "Sushi Boat - $29.90",
+  ],
+  "picBox"
+);
+
+/* Menu section - End */
 
 /* Footer - Start */
 
 const footer = createTags("footer", "footer");
-expandHtml(document.body.firstElementChild, footer);
+expandHtml(document.body, footer);
 
 const terms = createTags("div", "terms");
 expandHtml(footer, terms);

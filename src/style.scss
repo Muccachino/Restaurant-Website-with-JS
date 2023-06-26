@@ -5,83 +5,164 @@
 
 body {
   background-color: black;
-  #content_Home {
-    .header {
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    background-color: black;
+    color: white;
+    border-bottom: 2px solid white;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    .nav {
+      text-decoration: none;
       display: flex;
-      justify-content: space-around;
-      align-items: center;
-      height: 150px;
-      background-color: black;
-      color: white;
-      img {
-        width: 100px;
-        height: 100px;
-      }
-      .nav {
-        text-decoration: none;
-        display: flex;
-        list-style-type: none;
-        font-size: 1.5em;
-        li {
-          margin-right: 100px;
+      list-style-type: none;
+      font-size: 1.5em;
+      li {
+        margin-right: 100px;
+        transition: scale 0.5s linear;
+        &:hover {
+          scale: 120%;
+          text-decoration: underline;
         }
       }
     }
-    #main {
-      #cover {
-        h1 {
-          text-align: center;
-        }
-        height: 600px;
-        padding-top: 100px;
+  }
+
+  /* Home section - Start */
+  #home {
+    #cover {
+      h1 {
+        text-align: center;
+      }
+      height: 600px;
+      padding-top: 100px;
+      color: white;
+      font-size: 3em;
+      background: url(../src/img/sora-sagano-8sOZJ8JF0S8-unsplash.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  #food_examples {
+    color: white;
+    text-align: center;
+    h2 {
+      margin: 30px 0;
+    }
+    #food_pictures {
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: space-evenly;
+      img {
+        width: 200px;
+        height: 150px;
+      }
+    }
+  }
+
+  /* Home section - End */
+
+  /* Menu section - Start */
+  #menu {
+    padding-top: 80px;
+    #menu_Headline {
+      color: white;
+      text-align: center;
+      font-size: 2.5em;
+      text-decoration: underline;
+    }
+    #menu_Container {
+      margin: 150px 10vw;
+      display: grid;
+      gap: 100px;
+      grid-template-columns: repeat(3, 1fr);
+
+      div {
+        border: 1px solid white;
+        color: transparent;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        width: 350px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
         color: white;
-        font-size: 3em;
-        background: url(../src/img/sora-sagano-8sOZJ8JF0S8-unsplash.jpg);
+        text-shadow: 2px 2px black;
+        transition: scale 0.3s linear;
+        &:hover {
+          scale: 110%;
+        }
+      }
+      .picBox0 {
+        background: url(./img/ramen1.jpg);
+        background-size: cover;
+        background-position: bottom;
+      }
+      .picBox1 {
+        background: url(./img/bowl1.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .picBox2 {
+        background: url(./img/noodle1.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .picBox3 {
+        background: url(./img/sushi1.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .picBox4 {
+        background: url(./img/sushi2.jpg);
+        background-size: cover;
+        background-position: center;
+      }
+      .picBox5 {
+        background: url(./img/sushi3.jpg);
         background-size: cover;
         background-position: center;
       }
     }
-    #food_examples {
-      color: white;
-      text-align: center;
-      h2 {
-        margin: 30px 0;
-      }
-      #food_pictures {
-        display: flex;
-        justify-content: space-evenly;
-        img {
-          width: 200px;
-          height: 150px;
-        }
-      }
-    }
-    .footer {
-      color: white;
-      padding-top: 75px;
-      height: 150px;
-      display: flex;
-      justify-content: space-between;
-      .terms {
-        margin-left: 150px;
-        a {
-          text-decoration: none;
-          color: white;
-          margin-right: 30px;
-        }
-      }
-      .socialmedia {
-        margin-right: 150px;
-        a {
-          color: white;
-          text-decoration: none;
-          margin-left: 30px;
-          scale: 150px;
-        }
-        i {
-          scale: 150%;
-        }
+  }
+  /* Menu section - End */
+
+  .footer {
+    border-top: 2px solid white;
+    color: white;
+    padding-top: 45px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    .terms {
+      margin-left: 150px;
+      a {
+        text-decoration: none;
+        color: white;
+        margin-right: 30px;
       }
     }
+    .socialmedia {
+      margin-right: 150px;
+      a {
+        color: white;
+        text-decoration: none;
+        margin-left: 30px;
+        scale: 150px;
+      }
+      i {
+        scale: 150%;
+      }
+    }
+  }
+  .hide {
+    display: none;
   }
 }
