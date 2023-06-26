@@ -134,6 +134,59 @@ body {
   }
   /* Menu section - End */
 
+  /* Contact section - Start */
+
+  #contact {
+    #contact_Cover {
+      height: 400px;
+      background: url(./img/reservation.jpg);
+      background-size: cover;
+      background-position: center;
+      border-bottom: 2px solid white;
+    }
+    #form {
+      margin: 50px auto;
+      padding: 30px;
+      width: 60vw;
+      height: 500px;
+      border: 3px solid white;
+      color: white;
+      display: grid;
+      gap: 10px;
+      text-align: center;
+      h2 {
+        font-size: 2em;
+      }
+      input[type="text"] {
+        height: 40px;
+        font-size: large;
+      }
+      textarea {
+        height: 150px;
+      }
+      button {
+        width: 10%;
+        justify-self: center;
+        border: 1px solid white;
+        border-radius: 3px;
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+    #contact_Info {
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 50px;
+      justify-items: center;
+      font-size: 1.2em;
+    }
+  }
+
+  /* Contact section - End */
+
   .footer {
     border-top: 2px solid white;
     color: white;
