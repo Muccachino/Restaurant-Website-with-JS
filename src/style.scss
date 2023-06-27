@@ -5,6 +5,9 @@
 
 body {
   background-color: black;
+
+  /* Header - Start */
+
   .header {
     display: flex;
     justify-content: space-around;
@@ -32,6 +35,8 @@ body {
       }
     }
   }
+
+  /* Header - End */
 
   /* Home section - Start */
   #home {
@@ -187,6 +192,8 @@ body {
 
   /* Contact section - End */
 
+  /* Footer - Start */
+
   .footer {
     border-top: 2px solid white;
     color: white;
@@ -215,6 +222,9 @@ body {
       }
     }
   }
+
+  /* Footer - End */
+
   .hide {
     display: none;
   }
