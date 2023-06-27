@@ -1,7 +1,12 @@
-"use strict"
+"use strict";
 
-import logo from "./img/new_cherry_blossom_logo3.jpg";
-import * from "./functions"
+import logo from "../img/new_cherry_blossom_logo3.jpg";
+import {
+  createTags,
+  expandHtml,
+  addPicture,
+  createMultipleTags,
+} from "./functions";
 
 const loadHeader = () => {
   const header = createTags("header", "header");
@@ -11,7 +16,13 @@ const loadHeader = () => {
 
   const headerNavi = createTags("ul", "nav");
   expandHtml(header, headerNavi);
-  createMultipleTags("li", 2, headerNavi, ["Home", "Menu", "Contact Us"], "nav");
-}
+  createMultipleTags(
+    "li",
+    2,
+    headerNavi,
+    ["Home", "Menu", "Contact Us"],
+    "nav"
+  );
+};
 
-export {loadHeader};
+export { loadHeader };

@@ -1,6 +1,11 @@
 "use strict";
 
-import * from "./functions";
+import {
+  createTags,
+  expandHtml,
+  addPicture,
+  createMultipleTags,
+} from "./functions";
 
 const loadMenuPage = () => {
   const menu = createTags("section", "hide", "menu");

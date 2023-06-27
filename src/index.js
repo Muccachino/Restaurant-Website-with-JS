@@ -1,5 +1,10 @@
 import "./style.scss";
-import * from "./modules/functions";
+import {
+  createTags,
+  expandHtml,
+  addPicture,
+  createMultipleTags,
+} from "./modules/functions";
 
 import { loadHeader } from "./modules/header";
 import { loadHomePage } from "./modules/home";
@@ -22,7 +27,6 @@ loadContactPage();
 /* Footer - Start */
 loadFooter();
 /* Footer - End */
-
 
 /* Eventlistener for Nav Bar */
 

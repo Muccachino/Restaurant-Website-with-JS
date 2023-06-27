@@ -1,6 +1,11 @@
 "use strict";
 
-import * from "./functions";
+import {
+  createTags,
+  expandHtml,
+  addPicture,
+  createMultipleTags,
+} from "./functions";
 
 const loadContactPage = () => {
   const contact = createTags("section", "hide", "contact");
@@ -35,7 +40,7 @@ const loadContactPage = () => {
   expandHtml(informationBox, contactInfo1);
   expandHtml(informationBox, contactInfo2);
 
-  const adress = createMultipleTags("p", 4, contactInfo1, [
+  const address = createMultipleTags("p", 4, contactInfo1, [
     "Japanese Restaurant Sakura",
     "Kirschblütenweg 3",
     "8010 Graz",

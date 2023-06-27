@@ -1,10 +1,15 @@
 "use strict";
 
-import bowl1 from "./img/bowl1.jpg";
-import ramen1 from "./img/ramen1.jpg";
-import sushi1 from "./img/sushi1.jpg";
+import bowl1 from "../img/bowl1.jpg";
+import ramen1 from "../img/ramen1.jpg";
+import sushi3 from "../img/sushi3.jpg";
 
-import * from "./functions";
+import {
+  createTags,
+  expandHtml,
+  addPicture,
+  createMultipleTags,
+} from "./functions";
 
 /* Home section - Start */
 
